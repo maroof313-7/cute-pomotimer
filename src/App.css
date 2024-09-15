@@ -1,38 +1,177 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Main App Container */
 .App {
   text-align: center;
+  background: url('https://i.pinimg.com/564x/19/9e/51/199e51ed5c674953471546f9b1d04e9d.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Header Styling */
+h1 {
+  font-size: 3rem; /* Larger font size */
+  color: #fff; /* Light text color */
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6); /* Stronger shadow for readability */
+  font-weight: 700; /* Bold text */
+  margin: 0;
+  padding-bottom: 20px; /* Space below the heading */
+  letter-spacing: 1.5px; /* Increased letter spacing */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Form Container */
+form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+  max-width: 600px; /* Max width of form */
+  margin: 0 auto; /* Center the form */
 }
 
-.App-link {
-  color: #61dafb;
+/* Input Fields */
+input {
+  padding: 12px;
+  width: 100%;
+  max-width: 400px; /* Limit max width */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  margin-bottom: 15px; /* Space between input fields */
+  border: 2px solid #ddd;
+  border-radius: 10px; /* Rounded corners */
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+  color: #333; /* Darker text color */
+  font-size: 1rem; /* Font size for better readability */
+  font-family: 'Arial', sans-serif; /* Consistent font */
+  transition: all 0.3s ease; /* Smooth transition */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Input Focus State */
+input:focus {
+  border-color: #007bff; /* Highlight border on focus */
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Glow effect on focus */
+}
+
+/* Button Styling */
+button {
+  padding: 12px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border: none;
+  background-color: #007bff; /* Primary color */
+  color: #fff;
+  border-radius: 10px; /* Rounded corners */
+  font-size: 1rem;
+  font-weight: 600; /* Semi-bold text */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Button Hover State */
+button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.4); /* Glow effect on hover */
+}
+
+/* List Styles */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.9); /* Slightly more opaque white */
+  margin-bottom: 10px; /* Space between list items */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Stronger shadow for separation */
+  border-radius: 10px; /* Rounded corners */
+  color: #333; /* Darker text color */
+  font-size: 1rem; /* Consistent font size */
+}
+
+/* Delete Button in List */
+button.delete {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 0.9rem; /* Slightly smaller font size */
+}
+
+/* Delete Button Hover State */
+button.delete:hover {
+  background-color: #c0392b; /* Darker shade on hover */
+}
+
+/* Pomodoro Timer Styles */
+.pomodoro {
+  margin-top: 15px; /* Reduced margin */
+  padding: 10px; /* Reduced padding */
+  background: rgba(255, 255, 255, 0.7); /* More opaque white */
+  border-radius: 8px; /* Slightly smaller border radius */
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2); /* Slightly less shadow */
+}
+
+.pomodoro h2 {
+  margin-bottom: 8px; /* Reduced margin */
+  font-size: 1.5rem; /* Smaller font size */
+  color: #333;
+}
+
+.timer {
+  font-size: 2rem; /* Smaller font size */
+  margin-bottom: 10px; /* Reduced margin */
+  color: #333;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  background-color: #ddd;
+  color: #aaa;
+}
+
+button:hover:not(:disabled) {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+  h1 {
+      font-size: 2rem; /* Adjust font size for smaller screens */
   }
-  to {
-    transform: rotate(360deg);
+
+  input {
+      width: 90%;
+  }
+
+  button {
+      width: 100%;
+  }
+
+  li {
+      font-size: 0.9rem; /* Adjust font size for smaller screens */
+  }
+
+  .pomodoro h2 {
+      font-size: 1.2rem; /* Further reduced font size */
+  }
+
+  .timer {
+      font-size: 1.8rem; /* Further reduced font size */
   }
 }
