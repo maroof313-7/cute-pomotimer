@@ -1,3 +1,31 @@
+#Pomodoro Timer App
+
+This is a basic Pomodoro Timer application built using React. I created this simple app in just 15 minutes out of boredom. It serves as a minimal and functional tool for managing your Pomodoro sessions.
+
+#Description
+
+The Pomodoro Timer app is designed to help you manage your time efficiently by using the Pomodoro Technique. It features a straightforward interface with a timer that alternates between work and break intervals.
+
+#Features
+
+- Start and Stop Timer: Easily start and stop the timer for work and break sessions.
+- Responsive Design: Adapts to various screen sizes for a seamless experience on any device.
+- Minimalist Interface: Clean design focusing on core functionality.
+
+#Technologies Used
+
+- React: For building the user interface.
+- JavaScript: For app logic and functionality.
+- CSS: For styling the components.
+
+#To start the app.
+Install Dependencies:
+npm install
+Run the App:
+npm start
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
